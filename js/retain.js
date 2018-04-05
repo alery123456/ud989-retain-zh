@@ -8,6 +8,8 @@ $(function(){
         },
         add: function(obj) {
             var data = JSON.parse(localStorage.notes);
+            var date = new Date();
+            obj = {obj:date};
             data.push(obj);
             localStorage.notes = JSON.stringify(data);
         },
